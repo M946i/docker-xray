@@ -1,8 +1,8 @@
 # 使用基础的轻量级 Linux 镜像
 FROM alpine:latest
 
-# 创建一个非 root 用户
-RUN adduser -D -u 10014 appuser
+# 创建一个非 root 用户，UID 在 10000 到 20000 之间
+RUN adduser -D -u 10001 appuser
 
 # 设置工作目录
 WORKDIR /app
